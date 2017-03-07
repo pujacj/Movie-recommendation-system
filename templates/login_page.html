@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1/EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<link rel="stylesheet" href="{{url_for('static',filename='css/login_page.css') }}">
+<title> hi </title>
+
+</head>
+
+<body>
+
+    <div id="container">
+      <h1>Brainiac</h1>
+      <h2>Non-commercial, personalized movie recommendations.</h2>
+        <form action="/home" method="post">
+            <label for = "username"> </label>
+            <input type="text" id="username" name="username">
+            <div id="lower">
+                <input type="submit" value="Login">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

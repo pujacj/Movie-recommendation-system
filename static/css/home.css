@@ -1,0 +1,149 @@
+body
+{
+
+
+    font-family: "helvetica neue";
+    -webkit-font-smoothing: antialiased;
+    background-image: url("/static/images/road4.jpg");
+
+    -webkit-background-size: cover;
+
+    background-repeat:no-repeat;
+    background-position: top top;
+    background-attachment: fixed;
+    overflow:scroll;
+    height:2700px;
+    text-align:center;
+}
+
+
+#container
+{
+
+    width: 1100px;
+    height: 2700px;
+	  background:#ffffff ;
+    margin: 0 auto;
+    z-index:100;
+}
+.image
+{
+  position:relative;
+  width:100%;
+}
+
+
+h1
+{
+  position: absolute;
+  font-family:"andale mono";
+  margin-top: -590px;
+  margin-left: 30px;
+  font-size:60px;
+  text-align: center;
+  color: #fff;
+}
+
+
+h2
+{
+  position: absolute;
+  font-family: "helvetica neue";
+  margin-top:-100px;
+  margin-left: 320px;
+  font-size: 23px;
+  text-align: center;
+  color: #fff;
+}
+
+h3
+{
+  position:absolute;
+  top:600px;
+  left:320px;
+  font-size:26px;
+  color:#444;
+  font-family:"helvetica neue";
+}
+
+
+
+input[type=button] {
+
+
+
+    width: 90px;
+    height: 40px;
+    position:absolute;
+    top:36px;
+    left:970px;
+    font-family: "Times new", Helvetica, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ffffff;
+
+
+      margin: 0;
+      background: rgba(0,0,0,0.0);
+      border-radius: 3px;
+          border: 1px solid #fff;
+          padding: 8px;
+
+}
+
+input[type=button]:hover
+{
+   background: rgba(0,0,0,0.0);
+   color:rgba(0,0,0,0.4);
+}
+
+input[type=submit]
+{
+
+
+  position:absolute;
+  top:2600px;
+  left:670px;
+  width:100px;
+  height:40px;
+  font-family: "Signpainter", Helvetica, sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #272724; /*IE fallback*/
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#4f4f49), to(#272724));
+  background-image: -moz-linear-gradient(top left 90deg, #4f4f49 0%, #272724 100%);
+  background-image: linear-gradient(top left 90deg, #4f4f49 0%, #272724 100%);
+  border-radius: 10px;
+  border: 0px solid #4f4f49;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3), inset 0 1px 0 rgba(255, 255, 255, .5);
+  cursor: pointer;
+
+
+}
+
+input[type=submit]:hover
+{
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5a5a53), to(#343430));
+  background-image: -moz-linear-gradient(top left 90deg, #5a5a53 0%, #343430 100%);
+  background-image: linear-gradient(top left 90deg, #5a5a53 0%, #343430 100%);
+}
+
+input[type=button]:active {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#5a5a53), to(#343430));
+    background-image: -moz-linear-gradient(top left 90deg, #5a5a53 0%, #343430 100%);
+    background-image: linear-gradient(top left 90deg, #5a5a53 0%, #343430 100%);
+}
+
+#footer
+{
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+    height:30px;
+    font-size:20px;
+    margin-left: 160px;
+    margin-right: 160px;
+}

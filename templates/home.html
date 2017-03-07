@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1/EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<style>
+
+.row{
+
+  float:left;
+  margin-top:1800px;
+  margin-left:65px;
+    border: 0px solid #404040;
+    padding: 10px;
+    margin-right: 15px;
+
+}
+</style>
+
+<link rel="stylesheet" href="{{url_for('static',filename='css/home.css') }}">
+</head>
+
+<body>
+ <form action="/rating" method="POST" >
+
+  <div id="container">
+
+     <div class="image">
+      <img src="static/images/people.jpg" height="600px" width="1100px">
+
+      </img>
+
+        <h1> <b> Brainiac </b> </h1>
+
+        <h2> Hello! {{ username }} <br/> Find the movies you love. Discover new ones.</br>
+           Connect directly to your favourite artists.<br/>
+        </h2>
+
+        <h3> Rate the movies that you have watched..</h3>
+
+        <h4>
+        <select  name="lf" id="langfilter" onclick="filterContent();" style="position:absolute;
+        top:680px;
+        left:520px;
+        font-size:35px;
+         -webkit-appearance: none;
+        -moz-appearance: none;
+        border: 0 !important;
+        background-color: #404040;
+        color: #fff;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        font-size: 14px;
+        padding: 9px;
+        width: 11%;
+        cursor: pointer;
+        background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+        background-size: 40px 37px;" >
+             <option value="N">select lang</option>
+             <option value="A" selected="selected">English</option>
+             <option value="B" >Hindi</option>
+             <option value="C">Kannada</option>
+        </select>
+
+      </h4>
+
+
+
+
+
+
+
+
+  <div class="imagesandselect">
+
+
+
+
+        <div id="contentA">
+
+        <img src="static/images/avengers.jpeg" height="180px" width="180px" style="position:absolute;top:770px;left:85px"> </img>
+        <h3 style="position:absolute;top:770px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Avengers</br> Director : Joss Whedon</br> Stars: Robert Downey Jr.</br>Chris Evans</br>Scarlett Johansson</h3>
+        <select name="m1" style="position:absolute;top:900px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+         -moz-appearance: none;
+         border: 0 !important;
+         background-color: #404040;
+         color: #fff;
+         -webkit-border-radius: 5px;
+         border-radius: 5px;
+         font-size: 14px;
+         padding: 8px;
+         width: 7.5%;
+         cursor: pointer;
+         background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+         background-size: 40px 37px;" >
+          <option value="1.0">1.0</option>
+          <option value="2.0">2.0</option>
+          <option value="3.0">3.0</option>
+          <option value="4.0">4.0</option>
+          <option value="5.0">5.0</option>
+        </select>
+
+
+
+        <img src="static/images/avatar1.jpg" height="180px" width="180px" style="position:absolute;top:1100px;left:85px"> </img>
+        <h3 style="position:absolute;top:1100px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Avatar</br>Director : James Cameron</br>Stars : Sam Worthington</br>Zoe Saldana</br>Sigourney Weaver </h3>
+        <select name="m2" style="position:absolute;top:1230px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+         -moz-appearance: none;
+         border: 0 !important;
+         background-color: #404040;
+         color: #fff;
+         -webkit-border-radius: 5px;
+         border-radius: 5px;
+         font-size: 14px;
+         padding: 8px;
+         width: 7.5%;
+         cursor: pointer;
+         background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+         background-size: 40px 37px;">
+          <option value="1.0">1.0</option>
+          <option value="2.0">2.0</option>
+          <option value="3.0">3.0</option>
+          <option value="4.0">4.0</option>
+          <option value="5.0">5.0</option>
+        </select>
+
+
+
+
+
+        <img src="static/images/twilight.jpg" height="180px" width="180px" style="position:absolute;top:770px;left:600px"> </img>
+        <h3 style="position:absolute;top:770px;left:800px;font-size:15px;color:#444;font-family:interstate">Title : Twilight</br> Director : Catherine H</br> Stars : Kristen Stewart</br>Robert Pattinson</br>Billy Burke</h3>
+        <select name="m3" style="position:absolute;top:900px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+         -moz-appearance: none;
+         border: 0 !important;
+         background-color: #404040;
+         color: #fff;
+         -webkit-border-radius: 5px;
+         border-radius: 5px;
+         font-size: 14px;
+         padding: 8px;
+         width: 7.5%;
+         cursor: pointer;
+         background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+         background-size: 40px 37px;">
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+        </select>
+
+
+
+
+
+        <img src="static/images/fury.jpg" height="180px" width="180px" style="position:absolute;top:1100px;left:600px"> </img>
+        <h3 style="position:absolute;top:1100px;left:800px;font-size:15px;color:#444;font-family:interstate"> Title : Fury</br>Director : David Ricky </br>Stars : Brad Pitt</br> Shia LaBeouf</br> Logan Lerman</h3>
+        <select name="m4" style="position:absolute;top:1230px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+         -moz-appearance: none;
+         border: 0 !important;
+         background-color: #404040;
+         color: #fff;
+         -webkit-border-radius: 5px;
+         border-radius: 5px;
+         font-size: 14px;
+         padding: 8px;
+         width: 7.5%;
+         cursor: pointer;
+         background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+         background-size: 40px 37px;">
+        		<option value="1.0">1.0</option>
+        		<option value="2.0">2.0</option>
+        		<option value="3.0">3.0</option>
+        		<option value="4.0">4.0</option>
+        		<option value="5.0">5.0</option>
+          </select>
+
+          <img src="static/images/justlikeheaven.jpeg" height="180px" width="180px" style="position:absolute;top:1430px;left:85px"> </img>
+          <h3 style="position:absolute;top:1430px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Just like heaven</br> Director : Joss Whedon</br> Stars: Robert Downey Jr.</br>Chris Evans</br>Scarlett Johansson</h3>
+          <select name="m5" style="position:absolute;top:1560px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+          </select>
+
+
+
+          <img src="static/images/bridewars.jpg" height="180px" width="180px" style="position:absolute;top:1760px;left:85px"> </img>
+          <h3 style="position:absolute;top:1760px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Bride wars</br>Director : James Cameron</br>Stars : Sam Worthington</br>Zoe Saldana</br>Sigourney Weaver </h3>
+          <select name="m6" style="position:absolute;top:1890px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+          </select>
+
+
+
+
+
+          <img src="static/images/fightclub.jpg" height="180px" width="180px" style="position:absolute;top:1430px;left:600px"> </img>
+          <h3 style="position:absolute;top:1430px;left:800px;font-size:15px;color:#444;font-family:interstate">Title : Fight club</br> Director : Catherine H</br> Stars : Kristen Stewart</br>Robert Pattinson</br>Billy Burke</h3>
+          <select name="m7" style="position:absolute;top:1560px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+          </select>
+
+
+
+
+
+          <img src="static/images/hugo.jpg" height="180px" width="180px" style="position:absolute;top:1760px;left:600px"> </img>
+          <h3 style="position:absolute;top:1760px;left:800px;font-size:15px;color:#444;font-family:interstate"> Title : Hugo</br>Director : David Ricky </br>Stars : Brad Pitt</br> Shia LaBeouf</br> Logan Lerman</h3>
+          <select name="m8" style="position:absolute;top:1890px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+          		<option value="1.0">1.0</option>
+          		<option value="2.0">2.0</option>
+          		<option value="3.0">3.0</option>
+          		<option value="4.0">4.0</option>
+          		<option value="5.0">5.0</option>
+            </select>
+
+
+            <img src="static/images/kungfupanda.jpeg" height="180px" width="180px" style="position:absolute;top:2090px;left:85px"> </img>
+            <h3 style="position:absolute;top:2090px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Kungfu Panda</br> Director : Joss Whedon</br> Stars: Robert Downey Jr.</br>Chris Evans</br>Scarlett Johansson</h3>
+            <select name="m9" style="position:absolute;top:2220px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+             -moz-appearance: none;
+             border: 0 !important;
+             background-color: #404040;
+             color: #fff;
+             -webkit-border-radius: 5px;
+             border-radius: 5px;
+             font-size: 14px;
+             padding: 8px;
+             width: 7.5%;
+             cursor: pointer;
+             background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+             background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+            </select>
+
+
+
+            <img src="static/images/matrix.jpg" height="180px" width="180px" style="position:absolute;top:2090px;left:600px"> </img>
+            <h3 style="position:absolute;top:2090px;left:800px;font-size:15px;color:#444;font-family:interstate"> Title : Matrix</br>Director : James Cameron</br>Stars : Sam Worthington</br>Zoe Saldana</br>Sigourney Weaver </h3>
+            <select name="m10" style="position:absolute;top:2220px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+             -moz-appearance: none;
+             border: 0 !important;
+             background-color: #404040;
+             color: #fff;
+             -webkit-border-radius: 5px;
+             border-radius: 5px;
+             font-size: 14px;
+             padding: 8px;
+             width: 7.5%;
+             cursor: pointer;
+             background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+             background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+            </select>
+
+        </div>
+
+
+
+
+
+
+
+
+        <div id="contentB" style="display:none">
+        <img src="static/images/dilwale.jpeg" height="180px" width="180px" style="position:absolute;top:770px;left:85px"> </img>
+        <h3 style="position:absolute;top:770px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Dilwale</br> Director : Rohit Shetty</br> Stars: Shah Rukh Khan</br>Kajol</br>Varun Dhawan</h3>
+        <select name="m1" style="position:absolute;top:900px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+         -moz-appearance: none;
+         border: 0 !important;
+         background-color: #404040;
+         color: #fff;
+         -webkit-border-radius: 5px;
+         border-radius: 5px;
+         font-size: 14px;
+         padding: 8px;
+         width: 7.5%;
+         cursor: pointer;
+         background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+         background-size: 40px 37px;">
+          <option value="1.0">1.0</option>
+          <option value="2.0">2.0</option>
+          <option value="3.0">3.0</option>
+          <option value="4.0">4.0</option>
+          <option value="5.0">5.0</option>
+        </select>
+
+
+
+        <img src="static/images/barfi.jpg" height="180px" width="180px" style="position:absolute;top:1100px;left:85px"> </img>
+        <h3 style="position:absolute;top:1100px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Barfi</br>Director : Anurag Basu</br>Stars : Ranbir Kapoor</br>Priyanka Chopra</br>Illeana D'Cruz</h3>
+        <select name="m2" style="position:absolute;top:1230px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+         -moz-appearance: none;
+         border: 0 !important;
+         background-color: #404040;
+         color: #fff;
+         -webkit-border-radius: 5px;
+         border-radius: 5px;
+         font-size: 14px;
+         padding: 8px;
+         width: 7.5%;
+         cursor: pointer;
+         background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+         background-size: 40px 37px;">
+          <option value="1.0">1.0</option>
+          <option value="2.0">2.0</option>
+          <option value="3.0">3.0</option>
+          <option value="4.0">4.0</option>
+          <option value="5.0">5.0</option>
+        </select>
+
+
+
+
+
+        <img src="static/images/fukrey.jpg" height="180px" width="180px" style="position:absolute;top:770px;left:600px"> </img>
+        <h3 style="position:absolute;top:770px;left:800px;font-size:15px;color:#444;font-family:interstate">Title : Fukrey</br> Director : Mrighdeep Singh</br> Stars : Pulkit Samrat</br>Varun Sharma</br>Ali Fazal</h3>
+        <select name="m3" style="position:absolute;top:900px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+         -moz-appearance: none;
+         border: 0 !important;
+         background-color: #404040;
+         color: #fff;
+         -webkit-border-radius: 5px;
+         border-radius: 5px;
+         font-size: 14px;
+         padding: 8px;
+         width: 7.5%;
+         cursor: pointer;
+         background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+         background-size: 40px 37px;">
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+        </select>
+
+
+
+
+
+        <img src="static/images/housefull.jpg" height="180px" width="180px" style="position:absolute;top:1100px;left:600px"> </img>
+        <h3 style="position:absolute;top:1100px;left:800px;font-size:15px;color:#444;font-family:interstate"> Title : Housefull</br>Director : Sajid Khan Nadiawala</br>Stars : Akshay Kumar</br> Lara Dutta</br> Deepika Padukone </h3>
+        <select name="m4" style="position:absolute;top:1230px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+         -moz-appearance: none;
+         border: 0 !important;
+         background-color: #404040;
+         color: #fff;
+         -webkit-border-radius: 5px;
+         border-radius: 5px;
+         font-size: 14px;
+         padding: 8px;
+         width: 7.5%;
+         cursor: pointer;
+         background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+         background-size: 40px 37px;">
+        		<option value="1.0">1.0</option>
+        		<option value="2.0">2.0</option>
+        		<option value="3.0">3.0</option>
+        		<option value="4.0">4.0</option>
+        		<option value="5.0">5.0</option>
+          </select>
+
+          <img src="static/images/kika.jpg" height="180px" width="180px" style="position:absolute;top:1430px;left:85px"> </img>
+          <h3 style="position:absolute;top:1430px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Kika</br> Director : Joss Whedon</br> Stars: Robert Downey Jr.</br>Chris Evans</br>Scarlett Johansson</h3>
+          <select name="m5" style="position:absolute;top:1560px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+          </select>
+
+
+
+          <img src="static/images/neerja.jpg" height="180px" width="180px" style="position:absolute;top:1760px;left:85px"> </img>
+          <h3 style="position:absolute;top:1760px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Neerja</br>Director : James Cameron</br>Stars : Sam Worthington</br>Zoe Saldana</br>Sigourney Weaver </h3>
+          <select name="m6" style="position:absolute;top:1890px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+          </select>
+
+
+
+
+
+          <img src="static/images/nh10.jpg" height="180px" width="180px" style="position:absolute;top:1430px;left:600px"> </img>
+          <h3 style="position:absolute;top:1430px;left:800px;font-size:15px;color:#444;font-family:interstate">Title : NH10</br> Director : Catherine Hardwicke</br> Stars : Kristen Stewart</br>Robert Pattinson</br>Billy Burke</h3>
+          <select name="m7" style="position:absolute;top:1560px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+          </select>
+
+
+
+
+
+          <img src="static/images/raajneeti.jpg" height="180px" width="180px" style="position:absolute;top:1760px;left:600px"> </img>
+          <h3 style="position:absolute;top:1760px;left:800px;font-size:15px;color:#444;font-family:interstate"> Title : Raajneeti</br>Director : David Ricky Ayer</br>Stars : Brad Pitt</br> Shia LaBeouf</br> Logan Lerman</h3>
+          <select name="m8" style="position:absolute;top:1890px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+            </select>
+
+
+            <img src="static/images/ready.jpg" height="180px" width="180px" style="position:absolute;top:2090px;left:85px"> </img>
+            <h3 style="position:absolute;top:2090px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Ready</br> Director : Joss Whedon</br> Stars: Robert Downey Jr.</br>Chris Evans</br>Scarlett Johansson</h3>
+            <select name="m9" style="position:absolute;top:2220px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+             -moz-appearance: none;
+             border: 0 !important;
+             background-color: #404040;
+             color: #fff;
+             -webkit-border-radius: 5px;
+             border-radius: 5px;
+             font-size: 14px;
+             padding: 8px;
+             width: 7.5%;
+             cursor: pointer;
+             background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+             background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+            </select>
+
+
+
+            <img src="static/images/shaandaar.jpg" height="180px" width="180px" style="position:absolute;top:2090px;left:600px"> </img>
+            <h3 style="position:absolute;top:2090px;left:800px;font-size:15px;color:#444;font-family:interstate"> Title : Shaandaar</br>Director : James Cameron</br>Stars : Sam Worthington</br>Zoe Saldana</br>Sigourney Weaver </h3>
+            <select name="m10" style="position:absolute;top:2220px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+             -moz-appearance: none;
+             border: 0 !important;
+             background-color: #404040;
+             color: #fff;
+             -webkit-border-radius: 5px;
+             border-radius: 5px;
+             font-size: 14px;
+             padding: 8px;
+             width: 7.5%;
+             cursor: pointer;
+             background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+             background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+            </select>
+
+
+        </div>
+
+
+          <div id="contentC" style="display:none">
+          <img src="static/images/pancharangi.jpg" height="180px" width="180px" style="position:absolute;top:770px;left:85px"> </img>
+          <h3 style="position:absolute;top:770px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Pancharangi</br> Director : Yograj Bhatt</br> Stars: Diganth , Nidhi </br>Ramya Barna</h3>
+          <select name="m1" style="position:absolute;top:900px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+          </select>
+
+          <img src="static/images/bombat.jpg" height="180px" width="180px" style="position:absolute;top:1100px;left:85px"> </img>
+          <h3 style="position:absolute;top:1100px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Bombat</br>Director : D. Rajendra Babu</br>Stars : Ganesh , Ramya</br>Avinash </h3>
+          <select name="m2" style="position:absolute;top:1230px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+            <option value="1.0">1.0</option>
+            <option value="2.0">2.0</option>
+            <option value="3.0">3.0</option>
+            <option value="4.0">4.0</option>
+            <option value="5.0">5.0</option>
+          </select>
+
+          <img src="static/images/mungarumale.jpg" height="180px" width="180px" style="position:absolute;top:770px;left:600px"> </img>
+          <h3 style="position:absolute;top:770px;left:800px;font-size:15px;color:#444;font-family:interstate">Title : Mungaru Male</br> Director : Yogaraj Bhatt</br> Stars : Pooja Gandhi , Ganesh</br>Sathish Ninasam</br>Ananth Nag</h3>
+          <select name="m3" style="position:absolute;top:900px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+          </select>
+
+
+
+
+
+          <img src="static/images/manasaare.jpg" height="180px" width="180px" style="position:absolute;top:1100px;left:600px"> </img>
+          <h3 style="position:absolute;top:1100px;left:800px;font-size:15px;color:#444;font-family:interstate"> Title : Manasaare</br>Director : Yogaraj Bhatt</br>Stars : Aindrita , Diganth</br> Pawan Kumar</h3>
+          <select name="m4" style="position:absolute;top:1230px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+           -moz-appearance: none;
+           border: 0 !important;
+           background-color: #404040;
+           color: #fff;
+           -webkit-border-radius: 5px;
+           border-radius: 5px;
+           font-size: 14px;
+           padding: 8px;
+           width: 7.5%;
+           cursor: pointer;
+           background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+           background-size: 40px 37px;">
+          		<option value="1.0">1.0</option>
+          		<option value="2.0">2.0</option>
+          		<option value="3.0">3.0</option>
+          		<option value="4.0">4.0</option>
+          		<option value="5.0">5.0</option>
+            </select>
+
+
+            <img src="static/images/shivalinga.jpg" height="180px" width="180px" style="position:absolute;top:1430px;left:85px"> </img>
+            <h3 style="position:absolute;top:1430px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Shivalinga</br> Director : Joss Whedon</br> Stars: Robert Downey Jr.</br>Chris Evans</br>Scarlett Johansson</h3>
+            <select name="m5" style="position:absolute;top:1560px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+             -moz-appearance: none;
+             border: 0 !important;
+             background-color: #404040;
+             color: #fff;
+             -webkit-border-radius: 5px;
+             border-radius: 5px;
+             font-size: 14px;
+             padding: 8px;
+             width: 7.5%;
+             cursor: pointer;
+             background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+             background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+            </select>
+
+
+
+            <img src="static/images/ranna.jpg" height="180px" width="180px" style="position:absolute;top:1760px;left:85px"> </img>
+            <h3 style="position:absolute;top:1760px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Ranna</br>Director : James Cameron</br>Stars : Sam Worthington</br>Zoe Saldana</br>Sigourney Weaver </h3>
+            <select name="m6" style="position:absolute;top:1890px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+             -moz-appearance: none;
+             border: 0 !important;
+             background-color: #404040;
+             color: #fff;
+             -webkit-border-radius: 5px;
+             border-radius: 5px;
+             font-size: 14px;
+             padding: 8px;
+             width: 7.5%;
+             cursor: pointer;
+             background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+             background-size: 40px 37px;">
+              <option value="1.0">1.0</option>
+              <option value="2.0">2.0</option>
+              <option value="3.0">3.0</option>
+              <option value="4.0">4.0</option>
+              <option value="5.0">5.0</option>
+            </select>
+
+
+
+
+
+            <img src="static/images/hudugaru.jpg" height="180px" width="180px" style="position:absolute;top:1430px;left:600px"> </img>
+            <h3 style="position:absolute;top:1430px;left:800px;font-size:15px;color:#444;font-family:interstate">Title : Hudugaru</br> Director : Catherine Hardwicke</br> Stars : Kristen Stewart</br>Robert Pattinson</br>Billy Burke</h3>
+            <select name="m7" style="position:absolute;top:1560px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+             -moz-appearance: none;
+             border: 0 !important;
+             background-color: #404040;
+             color: #fff;
+             -webkit-border-radius: 5px;
+             border-radius: 5px;
+             font-size: 14px;
+             padding: 8px;
+             width: 7.5%;
+             cursor: pointer;
+             background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+             background-size: 40px 37px;">
+                <option value="1.0">1.0</option>
+                <option value="2.0">2.0</option>
+                <option value="3.0">3.0</option>
+                <option value="4.0">4.0</option>
+                <option value="5.0">5.0</option>
+            </select>
+
+
+
+
+
+            <img src="static/images/rangitaranga.jpg" height="180px" width="180px" style="position:absolute;top:1760px;left:600px"> </img>
+            <h3 style="position:absolute;top:1760px;left:800px;font-size:15px;color:#444;font-family:interstate"> Title : Rangitaranga</br>Director : David Ricky Ayer</br>Stars : Brad Pitt</br> Shia LaBeouf</br> Logan Lerman</h3>
+            <select name="m8" style="position:absolute;top:1890px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+             -moz-appearance: none;
+             border: 0 !important;
+             background-color: #404040;
+             color: #fff;
+             -webkit-border-radius: 5px;
+             border-radius: 5px;
+             font-size: 14px;
+             padding: 8px;
+             width: 7.5%;
+             cursor: pointer;
+             background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+             background-size: 40px 37px;">
+            		<option value="1.0">1.0</option>
+            		<option value="2.0">2.0</option>
+            		<option value="3.0">3.0</option>
+            		<option value="4.0">4.0</option>
+            		<option value="5.0">5.0</option>
+              </select>
+
+
+              <img src="static/images/annabond.jpg" height="180px" width="180px" style="position:absolute;top:2090px;left:85px"> </img>
+              <h3 style="position:absolute;top:2090px;left:280px;font-size:15px;color:#444;font-family:interstate"> Title : Anna Bond</br> Director : Joss Whedon</br> Stars: Robert Downey Jr.</br>Chris Evans</br>Scarlett Johansson</h3>
+              <select name="m9" style="position:absolute;top:2220px;left:340px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+               -moz-appearance: none;
+               border: 0 !important;
+               background-color: #404040;
+               color: #fff;
+               -webkit-border-radius: 5px;
+               border-radius: 5px;
+               font-size: 14px;
+               padding: 8px;
+               width: 7.5%;
+               cursor: pointer;
+               background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+               background-size: 40px 37px;">
+                <option value="1.0">1.0</option>
+                <option value="2.0">2.0</option>
+                <option value="3.0">3.0</option>
+                <option value="4.0">4.0</option>
+                <option value="5.0">5.0</option>
+              </select>
+
+
+
+              <img src="static/images/galaate.jpg" height="180px" width="180px" style="position:absolute;top:2090px;left:600px"> </img>
+              <h3 style="position:absolute;top:2090px;left:800px;font-size:15px;color:#444;font-family:interstate"> Title : Galaate</br>Director : James Cameron</br>Stars : Sam Worthington</br>Zoe Saldana</br>Sigourney Weaver </h3>
+              <select name="m10" style="position:absolute;top:2220px;left:850px;font-size:20px;color:#444;font-family:interstate;font-size:35px; -webkit-appearance: none;
+               -moz-appearance: none;
+               border: 0 !important;
+               background-color: #404040;
+               color: #fff;
+               -webkit-border-radius: 5px;
+               border-radius: 5px;
+               font-size: 14px;
+               padding: 8px;
+               width: 7.5%;
+               cursor: pointer;
+               background: #404040 url(/static/images/arrow.jpg) no-repeat right center;
+               background-size: 40px 37px;">
+                <option value="1.0">1.0</option>
+                <option value="2.0">2.0</option>
+                <option value="3.0">3.0</option>
+                <option value="4.0">4.0</option>
+                <option value="5.0">5.0</option>
+              </select>
+
+
+          </div>
+
+      </div>
+ <INPUT Type="button" VALUE="Log out" onClick="history.go(-1);return true;">
+
+
+
+
+ </div >
+  <label >
+        <div class="row" style="width:100px;">
+          <input type="checkbox" name="check" value="Action" style="margin-left:-10px;width:20px;" >Action<br/>
+          <input type="checkbox" name="check" value="Thriller" style="margin-left:-10px">Thriller<br/>
+          <input type="checkbox" name="check" value="Romance" style="margin-left:10px">Romance<br/>
+        </div>
+            <div class="row" style="width:100px">
+
+          <input type="checkbox" name="check" value="Mystery" style="margin-left:0px">Mystery<br/>
+          <input type="checkbox" name="check" value="War" style="margin-left:-30px">War<br/>
+          <input type="checkbox" name="check" value="Music" style="margin-left:-15px">Music<br/>
+        </div>
+        <div class="row" style="width:100px">
+          <input type="checkbox" name="check" value="Scifi" style="margin-left:0px">Scifi<br/>
+          <input type="checkbox" name="check" value="Fantasy" style="margin-left:22px">Fantasy<br/>
+          <input type="checkbox" name="check" value="Horror" style="margin-left:12px">Horror<br/>
+        </div>
+        <div class="row" style="width:100px">
+          <input type="checkbox" name="check" value="Adventure" style="margin-left:0px" >Adventure<br/>
+          <input type="checkbox" name="check" value="Animated" style="margin-left:-5px">Animated<br/>
+          <input type="checkbox" name="check" value="Crime" style="margin-left:-30px">Crime<br/>
+        </div>
+        <div class="row" style="width:100px">
+          <input type="checkbox" name="check" value="Drama" style="margin-left:-10px">Drama<br/>
+          <input type="checkbox" name="check" value="Biography" style="margin-left:12px">Biography<br/>
+          <input type="checkbox" name="check" value="Comedy" style="margin-left:3px">Comedy<br/>
+        </div>
+      </label>
+    </div>
+</div>
+      <div id="footer">
+      Copyright © Brainiac.Inc
+      </div>
+
+
+
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/welcome1.js') }}"></script>
+<input type="submit" >
+</form>
+</body>
+
+</html>

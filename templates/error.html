@@ -1,0 +1,18 @@
+<html>
+<head>
+<link rel="stylesheet" href="{{url_for('static',filename='css/error.css') }}">
+</head>
+
+
+<body>
+</form>
+
+      {% if error %}
+        <p class="error"><strong>Oops! </strong> {{ error }}
+       {% endif %}
+
+
+         <FORM><INPUT Type="button" VALUE="Go Back" onClick="history.go(-1);return true;"></FORM>
+
+</body>
+</html>

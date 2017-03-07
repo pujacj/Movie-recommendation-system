@@ -1,0 +1,111 @@
+h1
+{
+color:white;
+font-size:87px;
+font-family:"andale mono";
+position:absolute;
+margin-top: 60px;
+margin-left: 100px;
+}
+
+h2
+{
+color:white;
+font-size:30px;
+font-family:"helvetica neue";
+position:absolute;
+margin-top: 170px;
+margin-left: 105px;
+}
+
+html,body
+{
+
+    font-family: "Helvetica Neue";
+    color: #444;
+    -webkit-font-smoothing: antialiased;
+    background-image: url("/static/images/allmovies.png");
+    -moz-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+
+
+#container
+{
+    position: fixed;
+    width: 1500px;
+    height: 280px;
+    top: 50%;
+    left: 50%;
+    margin-top: -130px;
+    margin-left: -740px;
+	  background: #f9c806;
+    border-radius: 14px;
+    border: 1px solid #000;
+
+
+}
+
+form
+{
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+
+input
+{
+    font-family: "Times new", Helvetica, sans-serif;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type=text],
+input[type=username]
+{
+    color: #777;
+    padding-left: 10px;
+    margin: 0px;
+    top:  18px;
+    right: 170px;
+    position:absolute;
+    width: 230px;
+    height: 28px;
+	}
+
+
+
+
+
+
+input[type=submit] {
+    float: right;
+    right: 80px;
+    top: 18px;
+    width: 80px;
+    height: 33px;
+    position:absolute;
+    font-family: "Times new", Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #ffffff;
+
+      margin: 0;
+      background: rgba(0,0,0,0.0);
+      border-radius: 3px;
+      border: 1px solid #fff;
+      padding: 5px;
+
+}
+
+input[type=submit]:hover
+{
+   background: rgba(0,0,0,0.0);
+   color:rgba(0,0,0,0.9);
+}

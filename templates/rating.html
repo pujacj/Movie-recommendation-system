@@ -1,0 +1,182 @@
+
+<html>
+
+<head>
+  <link rel="stylesheet" href="{{url_for('static',filename='css/jquery.dataTables.min.css') }}">
+  <!--<link rel="stylesheet" href="{{url_for('static',filename='css/jquery.datatables.css') }}">-->
+  <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-1.12.0.min.js') }}"></script>
+  <!--<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.dataTables.min.js') }}"></script>-->
+  <!--<script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.min.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/dataTables.js') }}"></script>-->
+<script>
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+
+</script>
+<style>
+td{
+  text-align: center;
+}
+#datatable{
+width:auto;
+padding: 10px;
+margin-left:5px;
+margin-right:5px;
+margin-top:50px;
+background-color:#eeeeee;
+}
+
+body
+{
+
+
+    font-family: "helvetica neue";
+    -webkit-font-smoothing: antialiased;
+    background-image: url("/static/images/road4.jpg");
+
+    -webkit-background-size: cover;
+
+    background-repeat:no-repeat;
+    background-position: top top;
+    background-attachment: fixed;
+    overflow:scroll;
+    height:1500px;
+    text-align:center;
+}
+
+
+#container
+{
+
+    width: 1100px;
+    height: 1500px;
+	  background:#ffffff ;
+    margin: 0 auto;
+    z-index:100;
+}
+.image
+{
+  position:relative;
+  width:100%;
+}
+
+
+h1
+{
+  position: absolute;
+  font-family:"andale mono";
+  margin-top: -530px;
+  margin-left: 30px;
+  font-size:60px;
+  text-align: center;
+  color: #fff;
+}
+h3
+{
+  position: absolute;
+  font-family: "helvetica neue";
+  margin-top:-45px;
+  margin-left: 400px;
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+}
+
+#footer
+{
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:15px;
+    height:30px;
+    font-size:20px;
+    margin-left: 160px;
+    margin-right: 160px;
+}
+</style>
+
+</head>
+
+<body>
+
+  <div id="container">
+
+     <div class="image">
+      <img src="static/images/cover.jpg" height="550px" width="1100px">
+    <!--  <h3 style="position:absolute;bottom:70px;font-size: 30px;color: #444;">
+        Find the movies you love. Discover new ones.<br/>
+        Connect directly to your favourite artists. </h3> -->
+      </img>
+
+        <h1> <b> Brainiac </b> </h1>
+        <h3> The recommendations are.. </h3>
+
+
+     </div>
+<div id="datatable">
+
+<table id="example" class="display" cellspacing="0" >
+<thead>
+	<tr>
+    <th>Movie Name</th>
+	   <th>Recommended by</th>
+	     <th> Collaborative Score</th>
+	      <th> Content Score</th>
+
+
+
+  </tr>
+
+</thead>
+  <tfoot>
+    <tr>
+      <th>Movie Name</th>
+      <th>Recommended by</th>
+      <th> Collaborative Score</th>
+      <th> Content Score</th>
+
+
+
+    </tr>
+
+  </tfoot>
+
+<tbody>
+{% for person,movie_score in m_list.items() %}
+
+
+
+	{% for movie,score in movie_score.items() %}
+	<tr>
+    <td style="font-style:bold">{{ movie }}</td>
+		<td>{{ person}}</td>
+		<td>{{ scr[person] }}</td>
+		<td>{{ score }}</td>
+
+
+
+
+	</tr>
+
+	{% endfor %}
+
+
+{% endfor%}
+
+
+
+</tbody>
+
+</table>
+</div>
+
+
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery.dataTables.min.js') }}"></script>
+</div>
+<div id="footer">
+Copyright © Brainiac.Inc
+</div>
+
+</body>
+</html>
